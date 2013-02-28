@@ -58,7 +58,7 @@ sub profile_dir
       ->parent
       ->parent
       ->parent
-      ->subdir('public')
+      ->subdir('share')
       ->subdir($name);
   }
   
