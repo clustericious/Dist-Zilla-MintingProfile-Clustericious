@@ -1,5 +1,26 @@
 package Dist::Zilla::MintingProfile::Clustericious;
 
+# ABSTRACT: Minting profile for Clustericious clients and servers
+# VERSION
+
+=head1 SYNOPSIS
+
+ # create a new app without database
+ % dzil new -P Clustericious Foo
+
+ # create a new app with database
+ % dzil new -P Clustericious -p mbd_app Foo
+
+ # create a new client, NOTE: name must end in ::Client
+ % dzil new -P Clustericious -p client Foo::Client
+
+=head1 DESCRIPTION
+
+This minting profile is used to generate stub Clustericious
+applications in a L<Dist::Zilla> context.
+
+=cut
+
 use Moose;
 use v5.10;
 
@@ -8,9 +29,6 @@ with qw( Dist::Zilla::Role::MintingProfile );
 use namespace::autoclean;
 use File::ShareDir qw( dist_dir );
 use Path::Class qw( dir file );
-
-# ABSTRACT: Minting profile for Clustericious clients and servers
-# VERSION
 
 sub profile_dir
 {

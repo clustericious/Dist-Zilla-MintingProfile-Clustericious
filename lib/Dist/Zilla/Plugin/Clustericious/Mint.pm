@@ -1,7 +1,18 @@
-package Dist::Zilla::Plugin::Clustericious::Init;
+package Dist::Zilla::Plugin::Clustericious::Mint;
 
 # ABSTRACT: Generate new Clustericious dist from templates
 # VERSION
+
+=head1 DESCRIPTION
+
+This module is not usually used directly.  Instead see the
+C<Clustericious> minting profile.
+
+=head1 SEE ALSO
+
+L<Dist::Zilla::MintingProfile::Clustericious>
+
+=cut
 
 use Moose;
 use v5.10;
