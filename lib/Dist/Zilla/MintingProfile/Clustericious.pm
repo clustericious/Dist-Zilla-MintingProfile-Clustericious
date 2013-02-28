@@ -19,7 +19,11 @@ sub profile_dir
   $name = 'app' if $name eq 'default';
   my $dir;
 
-  if(defined $Dist::Zilla::MintingProfile::Clustericious::VERSION)
+  if(defined $ENV{DIST_ZILLA_MINTING_PROFILE_CLUSTERICIOUS})
+  {
+    $dir = dir( $ENV{DIST_ZILLA_MINTING_PROFILE_CLUSTERICIOUS} )->subdir($name);
+  }
+  elsif(defined $Dist::Zilla::MintingProfile::Clustericious::VERSION)
   {
     $dir = dir(dist_dir('Dist-Zilla-MintingProfile-Clustericious'))
       ->subdir($name);

@@ -3,6 +3,9 @@ use warnings;
 use Test::More tests => 1;
 use Test::DZil;
 use Path::Class qw( file dir );
+use FindBin ();
+
+$ENV{DIST_ZILLA_MINTING_PROFILE_CLUSTERICIOUS} = dir($FindBin::Bin)->parent->subdir('public')->stringify;
 
 my $tzil = Minter->_new_from_profile(
   [ Clustericious => 'mbd_app' ],
