@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Clustericious::Commands;
+
+% my $name = lc $class;
+% $name =~ s/::/_/g;
+# PODNAME: <%= $name . "client" %>
+# ABSTRACT: <%= $class %> server
+# VERSION
+
+$ENV{MOJO_APP} ||= '<%= $class %>';
+
+Clustericious::Commands->start;
