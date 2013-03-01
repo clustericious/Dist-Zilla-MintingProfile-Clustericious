@@ -5,7 +5,7 @@ use Test::DZil;
 use Path::Class qw( file dir );
 use FindBin ();
 
-$ENV{DIST_ZILLA_MINTING_PROFILE_CLUSTERICIOUS} = dir($FindBin::Bin)->parent->subdir('public')->stringify;
+$ENV{DIST_ZILLA_MINTING_PROFILE_CLUSTERICIOUS} = dir($FindBin::Bin)->parent->subdir('share')->stringify;
 
 my $tzil = Minter->_new_from_profile(
   [ Clustericious => 'client' ],
