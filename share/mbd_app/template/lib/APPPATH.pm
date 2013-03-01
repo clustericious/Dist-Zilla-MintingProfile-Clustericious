@@ -1,6 +1,6 @@
 package <%= $class %>;
 
-# ABSTRACT: Application class
+# ABSTRACT: Application Class
 # VERSION 
 
 =head1 SYNOPSIS

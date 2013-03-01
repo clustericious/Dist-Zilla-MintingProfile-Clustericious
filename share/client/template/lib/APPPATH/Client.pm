@@ -1,9 +1,5 @@
 package <%= $class %>::Client;
 
-use strict;
-use warnings;
-use Clustericious::Client;
-
 # ABSTRACT: <%= $class %> Client
 # VERSION
 
@@ -11,6 +7,12 @@ use Clustericious::Client;
 
  my $c = <%= $class %>::Client->new();
  my $msg = $c->welcome or die $c->errorstring;
+
+=cut
+
+use strict;
+use warnings;
+use Clustericious::Client;
 
 =head1 METHODS
 

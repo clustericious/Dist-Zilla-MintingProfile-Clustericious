@@ -1,14 +1,17 @@
 package <%= $class %>::Routes;
 
-use strict;
-use warnings;
-use Clustericious::RouteBuilder;
-
-# ABSTRACT: Set up routes for <%= $class %>.
+# ABSTRACT: Set up routes for <%= $class %>
+# VERSION
 
 =head1 DESCRIPTION
 
 This package defines the REST API for <%= $class %>.
+
+=cut
+
+use strict;
+use warnings;
+use Clustericious::RouteBuilder;
 
 =head1 ROUTES
 
