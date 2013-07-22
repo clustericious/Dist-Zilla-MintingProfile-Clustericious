@@ -11,6 +11,7 @@ This package defines the REST API for <%= $class %>.
 
 use strict;
 use warnings;
+use v5.10;
 use Clustericious::RouteBuilder;
 
 =head1 ROUTES

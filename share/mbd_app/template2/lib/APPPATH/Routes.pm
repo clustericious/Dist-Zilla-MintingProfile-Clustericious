@@ -1,5 +1,10 @@
 package <%= $class %>::Routes;
 
+use strict;
+use warnings;
+use <%= $class %>::Objects;
+use Clustericious::RouteBuilder;
+
 # ABSTRACT: Set up routes for <%= $class %>
 # VERSION
 
@@ -9,10 +14,6 @@ This package defines the REST API for <%= $class %>.
 
 =cut
 
-use strict;
-use warnings;
-use <%= $class %>::Objects;
-use Clustericious::RouteBuilder;
 use Clustericious::RouteBuilder::CRUD
         "create" => { -as => "do_create" },
         "read"   => { -as => "do_read"   },

@@ -1,5 +1,10 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+use v5.10;
+use Clustericious::Commands;
+
 % my $name = lc $class;
 % $name =~ s/::/_/g;
 # PODNAME: <%= $name . "client" %>
@@ -11,10 +16,6 @@
 L<<%= $class %>>
 
 =cut
-
-use strict;
-use warnings;
-use Clustericious::Commands;
 
 $ENV{MOJO_APP} ||= '<%= $class %>';
 

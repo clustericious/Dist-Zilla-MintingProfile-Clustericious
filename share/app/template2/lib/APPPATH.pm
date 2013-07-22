@@ -13,7 +13,8 @@ package <%= $class %>;
 
 use strict;
 use warnings;
-use base 'Clustericious::App';
+use v5.10;
+use Mojo::Base 'Clustericious::App';
 use <%= $class %>::Routes;
 
 1;

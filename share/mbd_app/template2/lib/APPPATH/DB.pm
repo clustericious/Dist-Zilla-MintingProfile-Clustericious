@@ -1,5 +1,11 @@
 package <%= $class %>::DB;
 
+use strict;
+use warnings;
+use v5.10;
+use Clustericious::Config;
+use base "Rose::Planter::DB";
+
 # ABSTRACT: Manage the database connection
 # VERSION
 
@@ -10,11 +16,6 @@ This manages the database connection for <%= $class %>.
 See L<Rose::Planter::DB>.
 
 =cut
-
-use strict;
-use warnings;
-use Clustericious::Config;
-use base "Rose::Planter::DB";
 
 __PACKAGE__->register_databases(
     module_name  => "<%= $class %>",

@@ -1,19 +1,18 @@
 package <%= $class %>;
 
+use strict;
+use warnings;
+use v5.10;
+use base 'Clustericious::App';
+use <%= $class %>::Routes;
+
 # ABSTRACT: Application Class
 # VERSION 
 
 =head1 SYNOPSIS
 
- use <%= $class %>
-
-=head1 DESCRIPTION
+ use <%= $class %>;
 
 =cut
-
-use strict;
-use warnings;
-use base 'Clustericious::App';
-use <%= $class %>::Routes;
 
 1;

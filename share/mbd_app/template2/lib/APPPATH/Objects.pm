@@ -1,5 +1,10 @@
 package <%= $class %>::Objects;
 
+use strict;
+use warnings;
+use v5.10;
+use <%= $class %>::DB;
+
 # ABSTRACT: All model classes for <%= $class %>
 # VERSION
 
@@ -9,9 +14,6 @@ Use this package to load all the <%= $class %>::Object::* classes.
 
 =cut
 
-use strict;
-use warnings;
-use <%= $class %>::DB;
 use Rose::Planter
         loader_params => {
             class_prefix => "<%= $class %>::Object",
