@@ -1,7 +1,7 @@
 package Dist::Zilla::Plugin::Clustericious::Mint;
 
 # ABSTRACT: Generate new Clustericious dist from templates
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02_01'; # VERSION
 
 
 use Moose;
@@ -79,13 +79,13 @@ sub make_module
     $class =~ s/::Client$//;
   }
 
-  my $dir = $self->zilla->root->subdir('template');
+  my $dir = $self->zilla->root->subdir('template2');
   
   unless(-d $dir)
   {
     $dir = Dist::Zilla::MintingProfile::Clustericious
       ->profile_dir($self->type)
-      ->subdir('template');
+      ->subdir('template2');
   }
   
   $self->_recurse(
@@ -111,7 +111,7 @@ Dist::Zilla::Plugin::Clustericious::Mint - Generate new Clustericious dist from 
 
 =head1 VERSION
 
-version 0.01
+version 0.02_01
 
 =head1 DESCRIPTION
 
