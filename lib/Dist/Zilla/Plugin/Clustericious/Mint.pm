@@ -89,13 +89,13 @@ sub make_module
     $class =~ s/::Client$//;
   }
 
-  my $dir = $self->zilla->root->subdir('template');
+  my $dir = $self->zilla->root->subdir('template2');
   
   unless(-d $dir)
   {
     $dir = Dist::Zilla::MintingProfile::Clustericious
       ->profile_dir($self->type)
-      ->subdir('template');
+      ->subdir('template2');
   }
   
   $self->_recurse(
